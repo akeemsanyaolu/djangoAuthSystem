@@ -1,8 +1,5 @@
 
-```markdown
-# Django Project Setup with Secret Key Generation
-
-This repository contains a Django project with a Python script for generating a secret key. This README provides step-by-step instructions on how to set up and run the project.
+This repository contains a Django project. This README provides step-by-step instructions on how to set up and run the project.
 
 ## Prerequisites
 
@@ -21,7 +18,6 @@ Before you begin, make sure you have the following installed on your system:
    git clone https://github.com/yourusername/your-django-secret-key-project.git
    ```
 
-   Replace `yourusername` and `your-django-secret-key-project` with your GitHub username and project name.
 
 2. **Create a Virtual Environment (Optional):**
 
@@ -67,9 +63,6 @@ Before you begin, make sure you have the following installed on your system:
    ```bash
    python generate_secret_key.py
    ```
-
-   The generated secret key will be printed to the console. You can copy this key and add it to your Django project's settings.
-
 
 6. **Run the Django Development Server:**
 
