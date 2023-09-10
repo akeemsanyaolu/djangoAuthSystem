@@ -3,7 +3,7 @@
 <h1>Login</h1>
 <form method="post">
     {% csrf_token %}
-    <label class="errors">{{form.errors}}</label>
+    <label class="errors">{{form.non_field_errors}}</label>
     <label>{{form.username.label}}</label>
     {{form.username}}
     
