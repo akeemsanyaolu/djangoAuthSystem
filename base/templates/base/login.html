@@ -3,12 +3,12 @@
 <h1>Login</h1>
 <form method="post">
     {% csrf_token %}
-    {% for field in form %}
-    <div class="fieldWrapper">
-        {{ field.errors }}
-        {{ field.label_tag }} {{ field }}
-    </div>
-{% endfor %}
+    <label class="errors">{{form.errors}}</label>
+    <label>{{form.username.label}}</label>
+    {{form.username}}
+    
+    <label>{{form.password.label}}</label>
+    {{form.password}}
  
     <input style="margin-top:10px ;" type="submit" value="Login" class="button">
 </form>
