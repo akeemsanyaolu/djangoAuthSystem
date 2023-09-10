@@ -15,14 +15,14 @@ Before you begin, make sure you have the following installed on your system:
    Clone this repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/your-django-secret-key-project.git
+   git clone https://github.com/akeemsanyaolu/yetti_assessment.git
    ```
 
 
 2. **Create a Virtual Environment (Optional):**
 
    ```bash
-   cd your-django-secret-key-project
+   cd yetti_assessment
    python -m venv venv
    ```
 
@@ -72,10 +72,4 @@ Before you begin, make sure you have the following installed on your system:
    python manage.py runserver
    ```
 
-   Your Django project should now be running. Access it in your web browser at `http://localhost:8000/`.
-
-
-## Running the Project
-
-To run your Django project in development mode, use the `python manage.py runserver` command. Make sure the virtual environment is activated if you created one.
-
+   The Django project should now be running. Access it on your web browser at `http://localhost:8000/`.
