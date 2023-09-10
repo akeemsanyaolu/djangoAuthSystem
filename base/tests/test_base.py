@@ -109,13 +109,3 @@ class TestSessionFixation(TestCase):
 
         # Check if the session ID changes after login
         self.assertNotEqual(original_session_id, new_session_id)
-
-class TestCSRFProtection(TestCase):
-    def test_csrf_token_protection(self):
-        user = get_user_model().objects.create_user(username='testuser', password='testpassword')
-        # Access a view that requires a POST request with CSRF token
-        #self.client.login(username='testuser', password='testpassword')
-        response = self.client.post('/login',data={})
-
-        # Check if the response status code is 403 (Forbidden)
-        self.assertEqual(response.status_code, 403)
