@@ -66,3 +66,44 @@ Before you begin, make sure you have the following installed on your system:
    ```
 
    The Django project should now be running. Access it on your web browser at `http://localhost:8000/`.
+
+
+
+## Running the Tests
+
+To run the unit tests, use the following command:
+
+```bash
+python manage.py test
+```
+
+This will execute all the unit tests in the project.
+
+
+### Test Description
+
+Here is a description of the tests included in this project:
+
+#### User Registration Tests
+
+- `test_user_registration_valid_data`: Tests user registration with valid data, including a valid username and matching passwords.
+- `test_user_registration_invalid_data`: Tests user registration with invalid data, including an empty username and non-matching passwords.
+
+#### User Login and Logout Tests
+
+- `test_user_login_valid_credentials`: Tests user login with valid credentials.
+- `test_user_login_invalid_credentials`: Tests user login with invalid credentials.
+- `test_user_logout`: Tests user logout after successful login.
+
+#### Home View Tests
+
+- `test_home_view_authenticated_user`: Tests access to the home view by an authenticated user.
+- `test_home_view_unauthenticated_user`: Tests redirection to the login page when an unauthenticated user tries to access the home view.
+
+#### Session Fixation Test
+
+- `test_session_id_changes_on_login`: Tests that a user's session ID changes after login, ensuring session fixation protection.
+
+### Test Results
+
+5. After running the tests, review the test results in the console. Each test case should provide feedback on whether it passed or failed.
