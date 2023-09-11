@@ -106,4 +106,4 @@ Here is a description of the tests included in this project:
 
 ### Test Results
 
-5. After running the tests, review the test results in the console. Each test case should provide feedback on whether it passed or failed.
+After running the tests, review the test results in the console. Each test case should provide feedback on whether it passed or failed.
