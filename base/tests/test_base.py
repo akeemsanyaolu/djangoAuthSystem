@@ -27,7 +27,7 @@ class TestUserRegistration(TestCase):
         self.assertEqual(response.status_code, 200)  # Registration form should be displayed again
         self.assertFalse(User.objects.filter(username='').exists())  # User should not be created
 
-    def test_user_is_authenticated(self):
+    def test_user_registration_authenticated_user(self):
         self.user = get_user_model().objects.create_user(username='testuser', password='testpassword')
         data = {
             'username': 'testuser',
@@ -37,7 +37,7 @@ class TestUserRegistration(TestCase):
         response = self.client.get(reverse('register'))
         self.assertRedirects(response, reverse('home'))
 
-    def test_unauthenticated_user(self):
+    def test_user_registration_unauthenticated_user(self):
         response = self.client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
 
@@ -64,6 +64,19 @@ class TestUserLoginLogout(TestCase):
         response = self.client.post(reverse('login'), data)
         self.assertEqual(response.status_code, 200)  # Login form should be displayed again
         self.assertFalse(self.client.session.get('_auth_user_id'))  # User should not be authenticated
+
+    def test_user_logign_authenticated_user(self):
+        data = {
+            'username': 'testuser',
+            'password': 'testpassword',
+        }
+        self.client.post(reverse('login'), data)
+        response = self.client.get(reverse('login'))
+        self.assertRedirects(response, reverse('home'))
+    
+    def test_user_login_unauthenticated_user(self):
+        response = self.client.get(reverse('login'))
+        self.assertEqual(response.status_code, 200)
 
     def test_user_logout(self):
         # Log in the user

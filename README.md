@@ -88,14 +88,17 @@ Here is a description of the tests included in this project:
 
 - `test_user_registration_valid_data`: Tests user registration with valid data, including a valid username and matching passwords.
 - `test_user_registration_invalid_data`: Tests user registration with invalid data, including an empty username and non-matching passwords.
-- `test_user_is_authenticated`: Tests that an authenticated user is redirected when attempting to access the registration page.
-- `test_unauthenticated_user`: Tests that an unauthenticated user can accesss the registration page.
+- `test_user_registration_authenticated_user`: Tests that an authenticated user (logged in user) is redirected when attempting to access the registration page.
+- `test_user_registration_unauthenticated_user`: Tests that an unauthenticated user can accesss the registration page.
 
 #### User Login and Logout Tests
 
 - `test_user_login_valid_credentials`: Tests user login with valid credentials.
 - `test_user_login_invalid_credentials`: Tests user login with invalid credentials.
+- `test_user_logign_authenticated_user`: Tests that an authenticated user (logged in user) is redirected when attempting to access the login page.
+- `test_user_login_unauthenticated_user`: Tests that an unauthenticated user can accesss the login page.
 - `test_user_logout`: Tests user logout after successful login.
+
 
 #### Home View Tests
 
