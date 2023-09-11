@@ -6,7 +6,6 @@ from django.test import Client
 
 class TestUserRegistration(TestCase):
     def test_user_registration_valid_data(self):
-        # Test user registration with valid data
         data = {
             'username': 'newuser',
             'password1': 'newpassword123',
@@ -14,8 +13,8 @@ class TestUserRegistration(TestCase):
         }
         response = self.client.post(reverse('register'), data)
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, reverse('home'))  # Redirect to success page or home
-        self.assertTrue(User.objects.filter(username='newuser').exists())  # Check if user exists in the database
+        self.assertRedirects(response, reverse('home'))
+        self.assertTrue(User.objects.filter(username='newuser').exists())
 
     def test_user_registration_invalid_data(self):
         # Test user registration with invalid data
