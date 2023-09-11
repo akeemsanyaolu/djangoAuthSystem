@@ -48,15 +48,8 @@ Before you begin, make sure you have the following installed on your system:
    pip install -r requirements.txt
    ```
 
-4. **Run the Django Migrations:**
 
-   Run the initial database migrations to set up the database schema:
-
-   ```bash
-   python manage.py migrate
-   ```
-
-5. **Generate a Secret Key:**
+4. **Generate a Secret Key:**
 
    You can use the provided Python script to generate a secret key. Execute the script:
 
@@ -64,7 +57,7 @@ Before you begin, make sure you have the following installed on your system:
    python generate_secret_key.py
    ```
 
-6. **Run the Django Development Server:**
+5. **Run the Django Development Server:**
 
    Start the Django development server:
 
